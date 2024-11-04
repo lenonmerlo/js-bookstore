@@ -1,5 +1,4 @@
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+const App = require('./App')
 
 const app = new App()
 
@@ -15,7 +14,7 @@ app.createBook('A Pirâmide Vermelha', '...', 'fantasy', 600, authors[1], '...',
 
 const books = app.getBooks()
 
-app.createUser('Isaac', 'isaac@email.com', '123456')
+app.createUser('Lenon', 'lenon@email.com', '123456')
 
 const users = app.getUsers()
 

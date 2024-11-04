@@ -35,6 +35,10 @@ module.exports = class App {
         App.#database.addBooksToStock(bookName, quantity);
     }
 
+    getBooks() {
+        return App.#database.find('books')
+    }
+
     createPoster(name, description, height, width, price, inStock) {
         const poster = new Poster(name, description, height, width, price, inStock);
         App.#database.savePoster(poster);
@@ -42,6 +46,10 @@ module.exports = class App {
 
     addPoster(posterName, quantity) { // Renomeado de `addBook` para `addPoster`
         App.#database.addPosterToStock(posterName, quantity);
+    }
+
+    getPosters() {
+        return App.#database.find(' poster')
     }
 
     createOrder(items, user) {
